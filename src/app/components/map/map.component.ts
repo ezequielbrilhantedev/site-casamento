@@ -15,7 +15,7 @@ export class MapComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    (Mapboxgl as any).accessToken = environment.mapboxKey;
+    (Mapboxgl as any).accessToken = environment.MAPBOX_KEY;
 
     this.mapa = new Mapboxgl.Map({
       container: 'map-mapbox', // container id
