@@ -1,0 +1,48 @@
+<div class="form-presenca">
+  <h1>Confirme sua presença</h1>
+  <form class="col-md-10">
+    <div class="form-presenca__check form-group">
+      <label> Você irá ao casamento? </label>
+      <br />
+      <label id="sim" for="sim">Sim</label>
+      <input type="radio" name="confirmacao" id="sim" required />
+      <label id="nao" for="nao">Não</label>
+      <input type="radio" name="confirmacao" id="nao" required />
+      <br />
+    </div>
+
+    <div class="form-presenca__nome input">
+      <label>Nome Completo</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        placeholder="Insira seu nome completo"
+      />
+    </div>
+
+    <div class="form-presenca__email input">
+      <label>E-mail</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        required
+        placeholder="name@example.com"
+      />
+      <h5>Você receberá a confirmação de presença neste e-mail.</h5>
+    </div>
+    <div class="form-presenca__cel input">
+      <label>Cel:</label>
+      <input
+        type="number"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-sm"
+      />
+    </div>
+
+    <button class="btn btn-primary botao-submit">Confirmar Presença</button>
+  </form>
+</div>

@@ -10,11 +10,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BodyComponent } from './components/body/body.component';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmacaoPresencaComponent } from './components/confirmacao-presenca/confirmacao-presenca.component';
+import { MapComponent } from './components/map/map.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    BodyComponent
+    BodyComponent,
+    ConfirmacaoPresencaComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

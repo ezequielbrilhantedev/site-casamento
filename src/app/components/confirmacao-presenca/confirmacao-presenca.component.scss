@@ -1,0 +1,57 @@
+.form-presenca {
+  margin-left: 10%;
+  margin-right: 10%;
+
+  h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &__check {
+    // display: flex;
+    // flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    font-size: 18px;
+
+    #sim {
+      font-size: 15px;
+      margin-right: 0.3rem;
+    }
+
+    #nao {
+      font-size: 15px;
+      margin-right: 0.3rem;
+    }
+  }
+
+  &__nome {
+    input {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // &__email {
+
+  // }
+
+  &__cel {
+    input {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+
+    font-size: 18px;
+  }
+
+  .botao-submit {
+    margin-bottom: 1rem;
+  }
+}
