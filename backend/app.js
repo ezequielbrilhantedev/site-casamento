@@ -6,8 +6,10 @@ const app = express();
 
 const port = 3000;
 
-const user = process.env.SMTP_USER
-const pass = process.env.SMTP_PASS
+// const user = process.env.SMTP_USER
+// const pass = process.env.SMTP_PASS
+const user = "ezequiel.brilhante@site-casamento.com"
+const pass = "Jesuscristo!7"
 
 app.get('/', (req, res) => res.send('Hello, world!'));
 
