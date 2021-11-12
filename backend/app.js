@@ -1,37 +1,40 @@
-// const environment = require(process.env.PASSWORD) 
+const dotenv = require('dotenv')
 
-const express = require('express');
-const nodemailer = require('nodemailer');
-const app = express();
+const express = require('express')
+const nodemailer = require('nodemailer')
+const app = express()
 
-const port = 3000;
+const port = 3000
 
-// const user = process.env.SMTP_USER
-// const pass = process.env.SMTP_PASS
-const user = "ezequiel.brilhante@site-casamento.com"
-const pass = "Jesuscristo!7"
+dotenv.config()
 
-app.get('/', (req, res) => res.send('Hello, world!'));
+const user = process.env.SMTP_USER
+const pass = process.env.SMTP_PASS
+
+app.get('/', (req, res) => res.send('Hello, world!'))
 
 app.get('/send', (req, res) => {
-    const transporter = nodemailer.createTransport({
-        host: "smtp.umbler.com",
-        port: 587,
-        auth: {user, pass}
-    })
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.umbler.com',
+    port: 587,
+    auth: { user, pass },
+  })
 
-    transporter.sendMail({
-        from: user,
-        to: user,
-        replyTo: "ezequielrb7@mail.com",
-        subject: "Confirmação para o casamento",
-        text: "Olá, estamos muito felizes por confirmar sua presença, muito obrigado!"
-    }).then(info => {
-        res.send(info)
-    }).catch(error => {
-        res.send(error)
-        console.log(error)
+  transporter
+    .sendMail({
+      from: user,
+      to: 'ezequielrb7@gmail.com',
+      replyTo: 'ezequielrb7@mail.com',
+      subject: 'Confirmação para o casamento',
+      text: 'Olá, estamos muito felizes por confirmar sua presença, muito obrigado!',
+    })
+    .then((info) => {
+      res.send(info)
+    })
+    .catch((error) => {
+      res.send(error)
+      console.log(error)
     })
 })
 
-app.listen(port, () => console.log(`listening on port ${port}`));
+app.listen(port, () => console.log(`listening on port ${port}`))
