@@ -2,11 +2,11 @@
   margin-top: 10%;
   margin-right: 10%;
   margin-left: 10%;
-  margin-bottom: 2rem;
 
   h1 {
     font-family: "Dancing Script", cursive;
     font-size: 3rem;
+    margin-bottom: 1.3rem;
   }
 
   #map-mapbox {
@@ -16,8 +16,8 @@
   }
 
   &__info {
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
     font-weight: 500;
   }
 }
