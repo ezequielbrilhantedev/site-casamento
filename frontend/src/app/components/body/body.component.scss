@@ -10,6 +10,15 @@
     img {
       border-radius: 30px;
 
+      @media (min-width: 768px) {
+        border-radius: 30px;
+        // padding: 5%;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+        margin-bottom: 14px;
+      }
+
       @media (max-width: 800px) {
         border-radius: 30px;
         // padding: 5%;
