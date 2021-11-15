@@ -15,21 +15,26 @@ app.get('/', (req, res) => res.send('Hello, world!'))
 
 app.get('/send', (req, res) => {
   const transporter = nodemailer.createTransport({
-    host: 'smtp.umbler.com',
+    host: 'smtp.gmail.com',
     port: 587,
     auth: { user, pass },
+    secure: false,
+    tls: {
+      rejectUnauthorized: false,
+    },
   })
 
   transporter
     .sendMail({
       from: user,
-      to: 'ezequielrb7@gmail.com',
+      to: user,
       replyTo: 'ezequielrb7@mail.com',
       subject: 'Confirmação para o casamento',
       text: 'Olá, estamos muito felizes por confirmar sua presença, muito obrigado!',
     })
     .then((info) => {
       res.send(info)
+      console.log(info)
     })
     .catch((error) => {
       res.send(error)
