@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfirmacaoPresencaService } from '../services/confirmacao-presenca.service';
 
 @Component({
   selector: 'app-confirmacao-presenca',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfirmacaoPresencaComponent implements OnInit {
 
-  constructor() { }
+  dadosForm: any
+
+  constructor(private confirmacaoPresenca: ConfirmacaoPresencaService) { }
 
   ngOnInit(): void {
+  }
+
+  enviarEmail(dadosForm: any) {
+    this.confirmacaoPresenca.enviarEmailService(dadosForm).subscribe(
+      (res) => {
+        let info = res
+        console.log(info)
+      },
+      (error) => {
+        console.log('erro', error)
+      }
+    )
   }
 
 }

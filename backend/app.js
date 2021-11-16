@@ -13,7 +13,11 @@ const pass = process.env.SMTP_PASS
 
 app.get('/', (req, res) => res.send('Hello, world!'))
 
-app.get('/send', (req, res) => {
+app.post('/send', (req, res) => {
+  let nome = req.params.nome
+  let email = req.params.email
+  let celuar = req.params.celuar
+
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
@@ -30,7 +34,10 @@ app.get('/send', (req, res) => {
       to: user,
       replyTo: 'ezequielrb7@mail.com',
       subject: 'Confirmação para o casamento',
-      text: 'Olá, estamos muito felizes por confirmar sua presença, muito obrigado!',
+      text: `Olá ${nome}, estamos muito felizes por confirmar sua presença, muito obrigado!
+        Seu e-mail: ${email},
+        Seu número de contato: ${celuar}
+      `,
     })
     .then((info) => {
       res.send(info)

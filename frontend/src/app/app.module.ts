@@ -12,6 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmacaoPresencaComponent } from './components/confirmacao-presenca/confirmacao-presenca.component';
 import { MapComponent } from './components/map/map.component';
+import { ConfirmacaoPresencaService } from './components/services/confirmacao-presenca.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +29,9 @@ import { MapComponent } from './components/map/map.component';
     MatToolbarModule,
     MatIconModule,
     NgbModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ConfirmacaoPresencaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
