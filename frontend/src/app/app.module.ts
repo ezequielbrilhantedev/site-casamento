@@ -12,13 +12,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmacaoPresencaComponent } from './components/confirmacao-presenca/confirmacao-presenca.component';
 import { MapComponent } from './components/map/map.component';
+import { HistoriaComponent } from './components/historia/historia.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     BodyComponent,
     ConfirmacaoPresencaComponent,
-    MapComponent
+    MapComponent,
+    HistoriaComponent
   ],
   imports: [
     BrowserModule,
