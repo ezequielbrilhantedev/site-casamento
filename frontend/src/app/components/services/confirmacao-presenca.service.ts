@@ -1,20 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfirmacaoPresencaService {
 
-  apiRoot: string = 'http://localhost:3000'
-
-  dadosForm: any;
+  apiRoot: string = '/api'
 
   constructor(private http: HttpClient) { }
 
-  enviarEmailService(dadosForm: any) {
-    return this.http.post(`${this.apiRoot}/send`, {
-      dadosForm
-    })
+  enviarEmailService(form: any) {
+    return this.http.get(`${this.apiRoot}/send`
+    )
   }
 }

@@ -13,7 +13,7 @@ const pass = process.env.SMTP_PASS
 
 app.get('/', (req, res) => res.send('Hello, world!'))
 
-app.post('/send', (req, res) => {
+app.get('/send', (req, res) => {
   let nome = req.params.nome
   let email = req.params.email
   let celuar = req.params.celuar
@@ -30,7 +30,7 @@ app.post('/send', (req, res) => {
 
   transporter
     .sendMail({
-      from: user,
+      from: email,
       to: user,
       replyTo: 'ezequielrb7@mail.com',
       subject: 'Confirmação para o casamento',

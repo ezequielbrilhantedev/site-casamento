@@ -8,18 +8,24 @@ import { ConfirmacaoPresencaService } from '../services/confirmacao-presenca.ser
 })
 export class ConfirmacaoPresencaComponent implements OnInit {
 
-  dadosForm: any
+  dadosForm: any = {
+    nome: '',
+    email: '',
+    celular: '',
+  }
 
   constructor(private confirmacaoPresenca: ConfirmacaoPresencaService) { }
 
   ngOnInit(): void {
   }
 
-  enviarEmail(dadosForm: any) {
-    this.confirmacaoPresenca.enviarEmailService(dadosForm).subscribe(
+  onSubmit(form: any) {
+  }
+  enviar(form: any) {
+    this.confirmacaoPresenca.enviarEmailService(form).subscribe(
       (res) => {
-        let info = res
-        console.log(info)
+        let info = res.valueOf()
+        console.log('info', info)
       },
       (error) => {
         console.log('erro', error)

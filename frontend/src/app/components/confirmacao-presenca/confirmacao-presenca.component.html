@@ -1,23 +1,26 @@
 <div class="form-presenca">
   <h1>Confirme sua presença</h1>
-  <form class="col-md-10">
-    <div class="form-presenca__check form-group">
+
+  <form class="col-md-10" #f="ngForm">
+    <!-- <div class="form-presenca__check form-group">
       <label> Você irá ao casamento? </label>
       <br />
       <label id="sim" for="sim">Sim</label>
-      <input type="radio" name="confirmacao" id="sim" required />
+      <input type="radio" name="sim" id="sim" required ngModel />
       <label id="nao" for="nao">Não</label>
-      <input type="radio" name="confirmacao" id="nao" required />
+      <input type="radio" name="nao" id="nao" required ngModel />
       <br />
-    </div>
+    </div> -->
 
     <div class="form-presenca__nome input">
       <label>Nome Completo</label>
       <input
         type="text"
+        name="nome"
         class="form-control"
         required
         placeholder="Insira seu nome completo"
+        ngModel
       />
     </div>
 
@@ -30,6 +33,7 @@
         id="email"
         required
         placeholder="name@example.com"
+        ngModel
       />
       <h5>Você receberá a confirmação de presença neste e-mail.</h5>
     </div>
@@ -37,16 +41,19 @@
       <label>Cel:</label>
       <input
         type="number"
+        name="celular"
         class="form-control"
         required
         aria-label="Sizing example input"
         aria-describedby="inputGroup-sizing-sm"
+        ngModel
       />
     </div>
 
     <button
+      type="submit"
+      (click)="enviar(f)"
       class="btn btn-primary botao-submit"
-      (click)="enviarEmail(dadosForm)"
     >
       Confirmar Presença
     </button>
