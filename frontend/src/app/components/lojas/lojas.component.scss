@@ -1,0 +1,44 @@
+.section_presentes {
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  padding-bottom: 5%;
+
+  &__header {
+    color: #fff;
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+  }
+
+  h3 {
+    color: #fff;
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+  }
+
+  &__lojas {
+    color: #fff;
+    font-size: 1rem;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &__pix {
+    color: #fff;
+  }
+
+  &__qrcode {
+    img {
+      width: 15%;
+    }
+
+    @media (max-width: 992px) {
+      img {
+        width: 45%;
+      }
+    }
+  }
+}

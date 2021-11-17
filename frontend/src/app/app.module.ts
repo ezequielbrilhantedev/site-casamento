@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmacaoPresencaComponent } from './components/confirmacao-presenca/confirmacao-presenca.component';
 import { MapComponent } from './components/map/map.component';
 import { HistoriaComponent } from './components/historia/historia.component';
+import { LojasComponent } from './components/lojas/lojas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { HistoriaComponent } from './components/historia/historia.component';
     BodyComponent,
     ConfirmacaoPresencaComponent,
     MapComponent,
-    HistoriaComponent
+    HistoriaComponent,
+    LojasComponent
   ],
   imports: [
     BrowserModule,
